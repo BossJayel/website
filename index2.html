@@ -24,11 +24,12 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-
-            background-color: #151F44;
+            /* Liukuväri: alkaa logon tarkan taustavärin sävystä (#131B38) */
+            background: radial-gradient(circle at center, #151F44 0%, #080b18 100%);
             font-family: 'Montserrat', sans-serif;
             color: #fffffe;
             text-align: center;
+            overflow-x: hidden;
         }
 
         .container {
@@ -39,27 +40,16 @@
             width: 100%;
         }
 
-        /* Logon tyylit ja leijuva animaatio */
+        /* Puhdas logo ilman hehkuja, varjoja tai efektejä */
         .logo-wrapper {
             margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-wrapper:hover {
-            transform: scale(1.04) rotate(-1deg);
         }
 
         .logo-img {
-            width: 220px;
-            height: 220px;
-            max-width: 60vw;
-            max-height: 60vw;
-            object-fit: cover;
-            border-radius: 50%;
-            /* Pehmeä hehku logon taustalle */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
-                        0 0 50px rgba(184, 193, 236, 0.25);
-            border: 3px solid rgba(184, 193, 236, 0.2);
+            width: 260px;
+            height: auto;
+            max-width: 75vw;
+            display: block;
         }
 
         h1 {
@@ -67,37 +57,35 @@
             font-weight: 900;
             color: #fffffe;
             text-transform: uppercase;
-            letter-spacing: 0.35rem;
+            letter-spacing: 0.3rem;
             margin: 0 0 0.5rem 0;
             cursor: default;
-            text-shadow: 0 5px 15px rgba(0,0,0,0.5), 
-                         0 0 40px rgba(184, 193, 236, 0.3);
             transition: color 0.3s ease;
         }
 
         h1:hover {
-            color: #b8c1ec;
+            color: #8E8CD6;
         }
 
         .tagline {
-            color: #b8c1ec;
+            color: #8E8CD6;
             font-size: 0.95rem;
             letter-spacing: 0.2rem;
             text-transform: uppercase;
-            margin-bottom: 2rem;
-            opacity: 0.85;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
         }
 
-        /* Painikkeen tyylit */
+        /* Google Play -painike */
         .play-link {
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
             padding: 0.85rem 1.8rem;
-            border: 1.5px solid rgba(184, 193, 236, 0.4);
+            border: 1.5px solid rgba(142, 140, 214, 0.4);
             border-radius: 999px;
             color: #fffffe;
-            background: rgba(184, 193, 236, 0.05);
+            background: rgba(142, 140, 214, 0.08);
             backdrop-filter: blur(8px);
             text-decoration: none;
             font-size: 0.9rem;
@@ -105,22 +93,20 @@
             letter-spacing: 0.12rem;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .play-link:hover {
-            background: rgba(184, 193, 236, 0.2);
-            border-color: #b8c1ec;
+            background: rgba(142, 140, 214, 0.2);
+            border-color: #8E8CD6;
             color: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(184, 193, 236, 0.25);
+            transform: translateY(-2px);
         }
 
         .play-link svg {
             width: 22px;
             height: 22px;
             flex-shrink: 0;
-            fill: #b8c1ec;
+            fill: #8E8CD6;
             transition: fill 0.3s ease;
         }
 
@@ -130,8 +116,7 @@
 
         @media (max-width: 600px) {
             .logo-img {
-                width: 170px;
-                height: 170px;
+                width: 200px;
             }
 
             h1 {
@@ -154,12 +139,12 @@
 <body>
 
     <div class="container">
-        <!-- Logo -->
+        <!-- Puhdas logo ilman hehkuja -->
         <div class="logo-wrapper">
-            <img src="logo.jpg" alt="Jayel Studios Logo" class="logo-img">
+            <img src="logo.png" alt="Jayel Studios Logo" class="logo-img">
         </div>
 
-        <!-- Yrityksen nimi -->
+        <!-- Otsikko ja kuvaus -->
         <h1>Jayel Studios</h1>
         <div class="tagline">Mobile Games & Apps</div>
 
